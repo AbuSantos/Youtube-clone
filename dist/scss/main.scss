@@ -1,0 +1,122 @@
+/** @format */
+@import "config";
+@import "sidebar";
+@import "section";
+@import "video";
+
+.first_rule {
+  border: none;
+  //   border-bottom: 1px solid #dbdbdb;
+}
+.main {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+.nav {
+  height: 80px;
+  width: 100%;
+  //   position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  &_logo img {
+    margin-left: 60px;
+    width: 90px;
+    // border: 1px solid green;
+    // padding: 15px;
+  }
+
+  &_ng {
+    position: relative;
+    font-size: 10px;
+    color: #242424;
+    bottom: 30px;
+    right: 8px;
+  }
+
+  &_burger {
+    position: absolute;
+    left: 15px;
+    top: 1.5rem;
+    height: 1.3px;
+    width: 18px;
+    background-color: #686464;
+    cursor: pointer;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: -5px;
+      height: 2px;
+      width: 18px;
+      background-color: #686464;
+      cursor: pointer;
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      top: 5px;
+      height: 2px;
+      width: 18px;
+      background-color: #686464;
+      cursor: pointer;
+    }
+  }
+
+  &_search {
+    display: flex;
+    // align-items: center;
+    margin-top: 15px;
+    & input {
+      width: 40vw;
+      height: 35px;
+      border-left: 0px;
+      border: 1px solid #dbdbdb;
+      padding: 5px;
+
+      ::placeholder {
+        color: rgb(161, 160, 160);
+      }
+    }
+    &_icon {
+      height: 35px;
+      width: 50px;
+      border: 1px solid #dbdbdb;
+
+      img {
+        width: 25px;
+        cursor: pointer;
+        // padding: 10px;
+      }
+    }
+
+    &_mic {
+      height: 35px;
+      width: 35px;
+      margin-left: 10px;
+      border-radius: 50%;
+      border: none;
+
+      img {
+        width: 20px;
+        // padding: 10px;
+      }
+    }
+  }
+
+  &_signin {
+    @include flexCenter;
+    margin-top: -20px;
+    padding: 10px;
+
+    img {
+      width: 25px;
+      margin-right: 6px;
+    }
+    button {
+      @include flexCenter;
+      @include buttonDesign;
+      margin-left: 0;
+    }
+  }
+}

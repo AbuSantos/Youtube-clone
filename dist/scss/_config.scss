@@ -1,0 +1,38 @@
+/** @format */
+
+$primary-color: aliceblue;
+$secondary-color: #e50914;
+
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+}
+
+@mixin buttonDesign {
+  border: 1px solid rgb(70, 70, 219);
+  padding: 7px;
+  font-size: 13px;
+  font-weight: weight(medium);
+  width: 100px;
+  margin-left: 20%;
+  color: rgb(70, 70, 219);
+  background-color: transparent;
+}
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 600,
+);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
